@@ -1,8 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 
 function HeaderTop() {
     const [open,setOpen]=useState(false)
+     useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [open])
   return (
     <div className='w-full h-15'>
         <div className='flex justify-between items-center h-full p-2.5'>
