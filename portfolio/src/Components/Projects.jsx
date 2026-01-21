@@ -11,7 +11,7 @@ function Projects() {
           setIsVisible(true)
         }
       },
-      {threshold:0.2}
+      {threshold:0.5}
     )
     if(projectRef.current) observer.observe(projectRef.current)
     return ()=>{

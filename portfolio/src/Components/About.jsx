@@ -11,7 +11,7 @@ function About() {
           setIsVisible(true)
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.5 }
     )
 
     if (aboutRef.current) observer.observe(aboutRef.current)
