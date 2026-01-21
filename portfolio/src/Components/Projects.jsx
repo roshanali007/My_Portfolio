@@ -6,7 +6,7 @@ function Projects() {
   const [isVisible,setIsVisible]=useState(false)
  const [hasScrolled, setHasScrolled] = useState(false)
 
-  // Detect user scroll
+
   useEffect(() => {
     const onScroll = () => {
       setHasScrolled(true)
@@ -16,7 +16,7 @@ function Projects() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Start observing ONLY after scroll
+  
   useEffect(() => {
     if (!hasScrolled || !projectRef.current) return
 
@@ -28,7 +28,7 @@ function Projects() {
         }
       },
       {
-        threshold: 0.2,
+        threshold: 0.1,
         rootMargin: '0px 0px -80px 0px',
       }
     )
@@ -39,7 +39,7 @@ function Projects() {
   }, [hasScrolled])
   return (
     <div className={`
-    pt-10
+    pt-10 min-h-[200px]
     transition-all duration-700 ease-out
     ${isVisible ? 'opacity-100 translate-y-0': 'opacity-0 translate-y-20'}
     `} ref={projectRef}>
