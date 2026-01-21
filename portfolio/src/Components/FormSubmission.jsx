@@ -90,7 +90,7 @@ function FormSubmission() {
           type="submit"
           className="w-full bg-white text-black py-3 rounded-md font-semibold hover:bg-gray-200 transition text-[18px]"
         >
-          Send 
+          Send Message
         </button>
       </form>
     </div>
