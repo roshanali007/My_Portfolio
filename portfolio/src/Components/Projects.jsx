@@ -4,20 +4,26 @@ import { useRef } from 'react'
 function Projects() {
   const projectRef=useRef(null)
   const [isVisible,setIsVisible]=useState(false)
-  useEffect(()=>{
-    const observer=new IntersectionObserver(
-      ([entry])=>{
-        if(entry.isIntersecting){
-          setIsVisible(true)
-        }
-      },
-      {threshold:0.5}
-    )
-    if(projectRef.current) observer.observe(projectRef.current)
-    return ()=>{
-        if(projectRef.current) observer.unobserve(projectRef.current)
+ useEffect(() => {
+  if (!projectRef.current) return
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true)
+        observer.disconnect()
+      }
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px',
     }
-  },[])
+  )
+
+  observer.observe(projectRef.current)
+
+  return () => observer.disconnect()
+}, [])
   return (
     <div className={`
     pt-10

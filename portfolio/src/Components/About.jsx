@@ -4,22 +4,26 @@ function About() {
   const aboutRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.5 }
-    )
+ useEffect(() => {
+  if (!aboutRef.current) return
 
-    if (aboutRef.current) observer.observe(aboutRef.current)
-
-    return () => {
-      if (aboutRef.current) observer.unobserve(aboutRef.current)
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        setIsVisible(true)
+        observer.disconnect()
+      }
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px',
     }
-  }, [])
+  )
+
+  observer.observe(aboutRef.current)
+
+  return () => observer.disconnect()
+}, [])
 
   return (
     <div
