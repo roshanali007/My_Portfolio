@@ -4,26 +4,39 @@ import { useRef } from 'react'
 function Projects() {
   const projectRef=useRef(null)
   const [isVisible,setIsVisible]=useState(false)
- useEffect(() => {
-  if (!projectRef.current) return
+ const [hasScrolled, setHasScrolled] = useState(false)
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true)
-        observer.disconnect()
-      }
-    },
-    {
-      threshold: 0.2,
-      rootMargin: '0px 0px -100px 0px',
+  // Detect user scroll
+  useEffect(() => {
+    const onScroll = () => {
+      setHasScrolled(true)
+      window.removeEventListener('scroll', onScroll)
     }
-  )
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
-  observer.observe(projectRef.current)
+  // Start observing ONLY after scroll
+  useEffect(() => {
+    if (!hasScrolled || !projectRef.current) return
 
-  return () => observer.disconnect()
-}, [])
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+          observer.disconnect()
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -80px 0px',
+      }
+    )
+
+    observer.observe(projectRef.current)
+
+    return () => observer.disconnect()
+  }, [hasScrolled])
   return (
     <div className={`
     pt-10
