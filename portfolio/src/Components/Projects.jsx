@@ -26,19 +26,19 @@ function Projects() {
     `} ref={projectRef}>
         <h1 className='text-3xl text-white pl-5'>Projects</h1>
         <div className='pt-5 px-5'>
-            <img src="/doordash_main.png" alt="" className='w-[150] h-auto'/>
+            <img src="/doordash_main.png" alt="" className='w-[150px] h-auto'/>
             <h2 className='text-white flex justify-center pt-2.5'>DoorDash</h2>
         </div>
         <div className='pt-5 px-5'>
-            <img src="/mailchimp_main.png" alt="" className='w-[150] h-auto' />
+            <img src="/mailchimp_main.png" alt="" className='w-[150px] h-auto' />
             <h2 className='text-white flex justify-center pt-2.5 '>MailChimp</h2>
         </div>
         <div className='pt-5 px-5'>
-            <img src="/mechkey_filter.png" alt="" className='w-[150] h-auto' />
+            <img src="/mechkey_filter.png" alt="" className='w-[150px] h-auto' />
             <h2 className='text-white flex justify-center pt-2.5'>MechKeys</h2>
         </div>
         <div className='pt-5 px-5'>
-            <img src="/filpkart_main.png" alt="" className='w-[150] h-auto' />
+            <img src="/filpkart_main.png" alt="" className='w-[150px] h-auto' />
             <h2 className='text-white flex justify-center pt-2.5'>Flipkart</h2>
         </div>
     </div>
