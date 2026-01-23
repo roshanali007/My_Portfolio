@@ -46,22 +46,25 @@ function Projects() {
     ${isVisible ? 'opacity-100 translate-y-0': 'opacity-0 translate-y-20'}
     `} ref={projectRef}>
         <h1 className='text-3xl text-white pl-5'>Projects</h1>
-        <div className='pt-5 px-5' onClick={()=>navigate('/doordash')}>
-            <img src="/doordash_main.png" alt="" className='w-auto h-auto'/>
-            <h2 className='text-white flex justify-center pt-2.5'>DoorDash</h2>
+        <div className='grid grid-cols-1'>
+            <div className='pt-5 px-5' onClick={()=>navigate('/doordash')}>
+              <img src="/doordash_main.png" alt="" className='w-auto h-auto'/>
+              <h2 className='text-white flex justify-center pt-2.5'>DoorDash</h2>
+            </div>
+            <div className='pt-5 px-5' onClick={()=>navigate('/mailchimp')}>
+                <img src="/mailchimp_main.png" alt="" className='w-auto h-auto' />
+                <h2 className='text-white flex justify-center pt-2.5 '>MailChimp</h2>
+            </div>
+            <div className='pt-5 px-5' onClick={()=>navigate('/mechkey')}>
+                <img src="/mechkey_filter.png" alt="" className='w-auto h-auto' />
+                <h2 className='text-white flex justify-center pt-2.5'>MechKeys</h2>
+            </div>
+            <div className='pt-5 px-5' onClick={()=>navigate('/flipkart')}>
+                <img src="/filpkart_main.png" alt="" className='w-auto h-auto' />
+                <h2 className='text-white flex justify-center pt-2.5'>Flipkart</h2>
+            </div>
         </div>
-        <div className='pt-5 px-5' onClick={()=>navigate('/mailchimp')}>
-            <img src="/mailchimp_main.png" alt="" className='w-auto h-auto' />
-            <h2 className='text-white flex justify-center pt-2.5 '>MailChimp</h2>
-        </div>
-        <div className='pt-5 px-5' onClick={()=>navigate('/mechkey')}>
-            <img src="/mechkey_filter.png" alt="" className='w-auto h-auto' />
-            <h2 className='text-white flex justify-center pt-2.5'>MechKeys</h2>
-        </div>
-        <div className='pt-5 px-5' onClick={()=>navigate('/flipkart')}>
-            <img src="/filpkart_main.png" alt="" className='w-auto h-auto' />
-            <h2 className='text-white flex justify-center pt-2.5'>Flipkart</h2>
-        </div>
+        
     </div>
   )
 }
