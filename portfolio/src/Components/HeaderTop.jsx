@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 
-function HeaderTop() {
+function HeaderTop({ onHome, onAbout, onProjects, onContact }) {
     const [open,setOpen]=useState(false)
+
+    const handleClick = (callback) => {
+      callback()
+      setOpen(false)
+    }
+
      useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden'
@@ -42,7 +48,13 @@ function HeaderTop() {
         </button>
       </div>
 
-       <Navbar open={open}/>
+       <Navbar
+        open={open}
+        onHome={() => handleClick(onHome)}
+        onAbout={() => handleClick(onAbout)}
+        onProjects={() => handleClick(onProjects)}
+        onContact={() => handleClick(onContact)}
+      />
     </div>
     
   )
