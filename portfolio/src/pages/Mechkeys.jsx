@@ -10,18 +10,18 @@ function Mechkeys() {
         },[])
     
       return (
-        <div className=' text-gray-600 overflow-hidden'>
+        <div className=' text-gray-600 overflow-x-hidden'>
             <h1 className='p-5 font-bold text-3xl'>MechKeys</h1>
             <div>
                 <img src="/mechkey_filter.png" alt="" className={`
                     py-5 pl-5 pr-10
                     transition-all duration-700 ease-out
-                    ${show? 'opacity-100 translate-x-0':'opacity-0 translate-x-50'}
+                    ${show? 'opacity-100 translate-x-0':'opacity-0 translate-x-12'}
                     `} />
                 <img src="/mechkey_2.png" alt="" className={`
                     py-5 pl-10 pr-5
                     transition-all duration-700 ease-out
-                    ${show? 'opacity-100 translate-x-0':'opacity-0 -translate-x-50'}
+                    ${show? 'opacity-100 translate-x-0':'opacity-0 -translate-x-12'}
                     `} />
             </div>
             <div className={`

@@ -10,18 +10,18 @@ function Flipkart() {
      },[])
  
    return (
-     <div className=' text-blue-400 overflow-hidden'>
+     <div className=' text-blue-400 overflow-x-hidden'>
          <h1 className='p-5 font-bold text-3xl'>Flipkart</h1>
          <div>
              <img src="/filpkart_main.png" alt="" className={`
                  py-5 pl-5 pr-10
                  transition-all duration-700 ease-out
-                 ${show? 'opacity-100 translate-x-0':'opacity-0 translate-x-50'}
+                 ${show? 'opacity-100 translate-x-0':'opacity-0 translate-x-12'}
                  `} />
              <img src="/flipkart_filter.png" alt="" className={`
                  py-5 pl-10 pr-5
                  transition-all duration-700 ease-out
-                 ${show? 'opacity-100 translate-x-0':'opacity-0 -translate-x-50'}
+                 ${show? 'opacity-100 translate-x-0':'opacity-0 -translate-x-12'}
                  `} />
          </div>
          <div className={`
