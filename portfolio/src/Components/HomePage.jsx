@@ -5,6 +5,7 @@ import About from './About'
 import Projects from './Projects'
 import FormSubmission from './FormSubmission'
 import Footer from './Footer'
+import CVDownload from './CVDownload'
 
 function HomePage() {
   const introRef = useRef(null)
@@ -25,7 +26,7 @@ function HomePage() {
         onContact={() => scrollToSection(contactRef)}
       />
 
-      <div ref={introRef}>
+      <div ref={introRef} >
         <Intro />
       </div>
 
@@ -42,6 +43,7 @@ function HomePage() {
       </div>
 
       <Footer />
+      <CVDownload/>
     </>
   )
 }

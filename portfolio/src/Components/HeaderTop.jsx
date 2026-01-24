@@ -21,7 +21,7 @@ function HeaderTop({ onHome, onAbout, onProjects, onContact }) {
     }
   }, [open])
   return (
-    <div className='w-full h-15 sm:flex sm:justify-between sm:items-center lg:max-w-5xl lg:mx-auto'>
+    <div className='w-full h-15 sm:flex sm:justify-between sm:items-center lg:max-w-5xl lg:mx-auto '>
         <div className='flex justify-between items-center h-full p-2.5'>
             <div className='flex justify-center items-center gap-2 h-full'>
                 <img src="/user_icon.webp" alt="" className='w-[50px] h-auto'/>

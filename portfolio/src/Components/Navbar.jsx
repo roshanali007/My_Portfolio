@@ -4,7 +4,7 @@ function Navbar({ open, onHome, onAbout, onProjects, onContact }) {
   return (
     <nav
       className={`
-        fixed top-16 left-0 w-full z-50
+        fixed top-15 left-0 w-full z-50
         h-[calc(100vh-63px)]
         bg-black text-white
         transition-all duration-300 ease-in-out
