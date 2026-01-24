@@ -9,11 +9,11 @@ function Intro() {
     <div 
     className={`p-10 text-[18px] text-white flex justify-center items-center gap-8 flex-col
       transition-all duration-700 ease-out
-      ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} sm:flex-row lg:max-w-5xl lg:mx-auto `}
     >
-        <span>roshanalink321@gmail.com</span>
-        <img src="/suit.jpeg" alt="" className='w-auto h-auto'/>
-        <span>+91 9074449535</span>
+        <span className='min-w-0 sm:wrap-break-word'>roshanalink321@gmail.com</span>
+        <img src="/suit.jpeg" alt="" className='lg:max-w-138 h-auto sm:shrink min-w-0 '/>
+        <span className='min-w-0 sm:wrap-break-word'>+91 9074449535</span>
     </div>
   )
 }

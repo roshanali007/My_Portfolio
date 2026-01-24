@@ -44,9 +44,10 @@ function Projects() {
     pt-10 min-h-[200px]
     transition-all duration-700 ease-out
     ${isVisible ? 'opacity-100 translate-y-0': 'opacity-0 translate-y-20'}
+    lg:max-w-5xl lg:mx-auto
     `} ref={projectRef}>
         <h1 className='text-3xl text-white pl-5'>Projects</h1>
-        <div className='grid grid-cols-1'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 '>
             <div className='pt-5 px-5' onClick={()=>navigate('/doordash')}>
               <img src="/doordash_main.png" alt="" className='w-auto h-auto'/>
               <h2 className='text-white flex justify-center pt-2.5'>DoorDash</h2>

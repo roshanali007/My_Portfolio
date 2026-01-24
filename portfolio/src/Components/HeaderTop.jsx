@@ -21,7 +21,7 @@ function HeaderTop({ onHome, onAbout, onProjects, onContact }) {
     }
   }, [open])
   return (
-    <div className='w-full h-15'>
+    <div className='w-full h-15 sm:flex sm:justify-between sm:items-center lg:max-w-5xl lg:mx-auto'>
         <div className='flex justify-between items-center h-full p-2.5'>
             <div className='flex justify-center items-center gap-2 h-full'>
                 <img src="/user_icon.webp" alt="" className='w-[50px] h-auto'/>
@@ -29,7 +29,7 @@ function HeaderTop({ onHome, onAbout, onProjects, onContact }) {
             </div>
             <button
           onClick={() => setOpen(!open)}
-          className="relative w-8 h-6"
+          className="relative w-8 h-6 sm:hidden"
         >
           <span
             className={`absolute top-1/2 left-0 w-8 h-0.5 bg-white -translate-y-1/2 transition-all
@@ -55,6 +55,14 @@ function HeaderTop({ onHome, onAbout, onProjects, onContact }) {
         onProjects={() => handleClick(onProjects)}
         onContact={() => handleClick(onContact)}
       />
+      <div className='text-white hidden sm:block'>
+        <ul className="flex  gap-6 p-6 text-lg justify-center items-center font-bold">
+          <li onClick={onHome} className="cursor-pointer hover:text-gray-300">Home</li>
+          <li onClick={onAbout} className="cursor-pointer hover:text-gray-300">About</li>
+          <li onClick={onProjects} className="cursor-pointer hover:text-gray-300">Projects</li>
+          <li onClick={onContact} className="cursor-pointer hover:text-gray-300">Contact</li>
+        </ul>
+      </div>
     </div>
     
   )
