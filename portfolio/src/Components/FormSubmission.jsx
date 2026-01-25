@@ -68,15 +68,15 @@ function FormSubmission() {
     lg:max-w-5xl lg:mx-auto
     `} ref={formsubref}>
       <h1 className="pt-8.5 text-3xl text-white  px-5">Get In Touch</h1>
-      <div className='sm:flex sm:justify-center'>
+      <div className='sm:flex sm:items-center sm:flex-col'>
 
-        <div className="text-white py-5 px-5 sm:min-w-70.5 sm:shrink sm:max-w-100">
+        <div className="text-white py-5 px-5 sm:min-w-70.5 sm:shrink sm:max-w-100 ">
           
           <p className="py-2.5 text-[18px]">
             Feel free to reach out for opportunities, collaborations,
             or any project-related discussions. I’m always open to connecting.
           </p>
-          <img src="/suit_with_tie.jpeg" alt="" className='w-auto h-auto'/>
+          {/* <img src="/suit_with_tie.jpeg" alt="" className='w-auto h-auto'/> */}
         </div>
 
         <form

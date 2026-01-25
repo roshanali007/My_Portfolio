@@ -12,7 +12,7 @@ function Intro() {
       ${show ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"} sm:flex-row lg:max-w-5xl lg:mx-auto `}
     >
         <span className='min-w-0 sm:wrap-break-word'>roshanalink321@gmail.com</span>
-        <img src="/suit.jpeg" alt="" className='lg:max-w-138 h-auto sm:shrink min-w-0 '/>
+        <img src="/intro_icon.jpeg" alt="" className='lg:max-w-138 h-auto sm:shrink min-w-0 '/>
         <span className='min-w-0 sm:wrap-break-word'>+91 9074449535</span>
     </div>
   )
